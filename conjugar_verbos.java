@@ -5,14 +5,13 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String verbo;
-		
 		//System.out.println("Introduce verbo y tiempo verbal, ejemplo: bailar P");
 		
 		String[] cadena;
-		String tiempoVerb;
+		String tiempoVerb = "";
 		
-		
-		do {
+		while(!tiempoVerb.equalsIgnoreCase("T")) {
+			
 			String entrada = sc.nextLine();
 			cadena = entrada.split(" ");
 			
@@ -24,17 +23,14 @@ public class Main {
 				conjugar(verbo, tiempoVerb, acabaEn);
 			}
 			
-		}while(!tiempoVerb.equalsIgnoreCase("T"));
-		
-		//String entrada = "vivir F";
-		
-		
-		
+		}
+
 	}
 	
 	public static void conjugar(String verbo, String tiempoverbal, String acabaEn){
 		String[] acaba = new String[6];
 		String personas[] = {"yo", "tu", "el", "nosotros", "vosotros", "ellos"};
+		String verboAcabaEn[] = {};
 		switch (tiempoverbal) {
 		
 		case "A": // Presente
