@@ -30,7 +30,6 @@ public class Main {
 	public static void conjugar(String verbo, String tiempoverbal, String acabaEn){
 		String[] acaba = new String[6];
 		String personas[] = {"yo", "tu", "el", "nosotros", "vosotros", "ellos"};
-		String verboAcabaEn[] = {};
 		switch (tiempoverbal) {
 		
 		case "A": // Presente
